@@ -584,3 +584,36 @@ section{
    font-size:1.6rem;
    color:#777;
 }
+
+
+/* ==== Mobile Menu Fix Override ==== */
+@media (max-width:768px){
+  .header{position:sticky;}
+  #menu-btn{
+    display:block !important;
+    font-size:2.5rem;
+    color:#222;
+    cursor:pointer;
+  }
+  .header .navbar{
+    position:absolute;
+    top:100%;
+    left:0;
+    right:0;
+    background:#fff;
+    display:none;
+    flex-direction:column;
+    box-shadow:0 .5rem 1rem rgba(0,0,0,.15);
+    z-index:999;
+  }
+  .header .navbar.active{
+    display:flex !important;
+  }
+  .header .navbar a{
+    display:block;
+    width:100%;
+    margin:0;
+    padding:1.5rem 2rem;
+    border-bottom:1px solid #eee;
+  }
+}
