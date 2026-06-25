@@ -584,29 +584,3 @@ section{
    font-size:1.6rem;
    color:#777;
 }
-
-
-.header .navbar{
-    position:absolute;
-    top:100%;
-    left:0;
-    right:0;
-
-    background:white;
-
-    box-shadow:0 .5rem 1rem rgba(0,0,0,.15);
-
-    display:none;
-}
-
-.header .navbar.active{
-    display:block;
-}
-
-.header .navbar a{
-    display:block;
-    padding:1.8rem;
-    margin:0;
-    text-align:center;
-    border-bottom:1px solid #eee;
-}
