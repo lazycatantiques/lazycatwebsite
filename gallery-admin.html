@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery Editor | Lazy Cat Antiques</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Dosis:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="gallery-admin.css">
+</head>
+<body>
+  <header class="admin-header">
+    <a href="../Product UI/Product.html" class="brand">
+      <img src="../images/lazyCatLogo.jpg" alt="Lazy Cat Antiques">
+      <span><strong>Lazy Cat Antiques</strong><small>Gallery Editor</small></span>
+    </a>
+    <div class="header-actions">
+      <a href="../Product UI/Product.html" target="_blank" rel="noopener">View Website</a>
+      <button id="logout-btn" class="secondary-btn hidden">Sign Out</button>
+    </div>
+  </header>
+
+  <main class="admin-main">
+    <section id="login-panel" class="login-panel">
+      <div class="panel-heading">
+        <span>Private Editor</span>
+        <h1>Welcome Back</h1>
+        <p>Sign in to update the Lazy Cat Antiques gallery.</p>
+      </div>
+      <form id="login-form">
+        <label>Email address<input id="email" type="email" autocomplete="username" required></label>
+        <label>Password<input id="password" type="password" autocomplete="current-password" required></label>
+        <button class="primary-btn" type="submit"><i class="fas fa-sign-in-alt"></i> Sign In</button>
+        <p id="login-error" class="message error hidden"></p>
+      </form>
+    </section>
+
+    <section id="editor-panel" class="hidden">
+      <div class="page-heading">
+        <div>
+          <span>Gallery Management</span>
+          <h1>Edit Your Collection</h1>
+          <p>Add photos, change descriptions, or remove pieces. When you choose a new photo, the editor downloads a copy ready to drop into the website's <code>images</code> folder on GitHub.</p>
+        </div>
+        <div class="heading-actions"><button id="import-btn" class="secondary-btn hidden"><i class="fas fa-magic"></i> Import Original Gallery</button><button id="add-btn" class="primary-btn"><i class="fas fa-plus"></i> Add Gallery Item</button></div>
+      </div>
+
+      <div id="status" class="message hidden"></div>
+      <div id="gallery-list" class="gallery-list"></div>
+    </section>
+  </main>
+
+  <div id="editor-modal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-card">
+      <div class="modal-header">
+        <div><span>Gallery Item</span><h2 id="modal-title">Add Gallery Item</h2></div>
+        <button id="close-modal" class="icon-btn" aria-label="Close"><i class="fas fa-times"></i></button>
+      </div>
+
+      <form id="item-form">
+        <input type="hidden" id="item-id">
+        <input type="hidden" id="existing-image-url">
+
+        <label>Photo
+          <div id="image-dropzone" class="dropzone">
+            <img id="image-preview" class="hidden" alt="Preview">
+            <div id="dropzone-placeholder"><i class="fas fa-camera"></i><strong>Choose a photo</strong><small>JPG, PNG, WEBP up to 10 MB</small><em>The photo will be downloaded so you can drop it into the website's <code>images</code> folder on GitHub.</em></div>
+            <input id="image-file" type="file" accept="image/jpeg,image/png,image/webp">
+          </div>
+        </label>
+
+        <div class="form-grid">
+          <label>Category<input id="category" type="text" placeholder="Furniture Collection" required></label>
+          <label>Title<input id="title" type="text" placeholder="Chair Set" required></label>
+        </div>
+
+        <label>Description<textarea id="description" rows="5" placeholder="Tell visitors a little about this piece..."></textarea></label>
+
+        <div class="modal-actions">
+          <button type="button" id="cancel-btn" class="secondary-btn">Cancel</button>
+          <button type="submit" id="save-btn" class="primary-btn"><i class="fas fa-save"></i> Save Item</button>
+        </div>
+        <p id="form-error" class="message error hidden"></p>
+      </form>
+    </div>
+  </div>
+
+  <script type="module" src="gallery-admin.js"></script>
+</body>
+</html>

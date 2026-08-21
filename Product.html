@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore the gallery at Lazy Cat Antiques in Cherokee, Iowa.">
+    <title>Gallery | Lazy Cat Antiques</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Dosis:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="gallery.css">
+</head>
+<body>
+
+<header class="header">
+    <a href="../index.html" class="logo">
+        <img src="../images/lazyCatLogo.jpg" alt="Lazy Cat Antiques">
+        <span class="logo-text">
+            <strong>Lazy Cat Antiques</strong>
+            <small>Unique &amp; Rare Antiques</small>
+        </span>
+    </a>
+
+    <nav class="navbar" aria-label="Main navigation">
+        <a href="../index.html">Home</a>
+        <a href="Product.html" aria-current="page">Gallery</a>
+    </nav>
+
+    <button id="menu-btn" class="fas fa-bars" aria-label="Open menu" aria-expanded="false"></button>
+</header>
+
+<section class="gallery-hero">
+    <div class="hero-content">
+        <span>Lazy Cat Antiques</span>
+        <h1>Gallery Collection</h1>
+        <p>Explore unique antiques, collectibles, and historical treasures.</p>
+    </div>
+</section>
+
+<main>
+    <section class="gallery-section">
+        <div class="section-heading">
+            <span>Our Collection</span>
+            <h2>Timeless Pieces</h2>
+            <p>Every piece has a story. Browse some of the treasures currently featured at Lazy Cat Antiques.</p>
+        </div>
+
+        <div id="gallery-grid" class="gallery-grid" aria-live="polite">
+            <div class="gallery-loading"><i class="fas fa-spinner fa-spin"></i> Loading the collection...</div>
+        </div>
+    </section>
+
+    <section class="gallery-banner">
+        <h2>Rare Finds &bull; Historic Treasures &bull; Collector Pieces</h2>
+    </section>
+
+    <section class="visit-section">
+        <span>Visit Us</span>
+        <h2>Experience The Collection In Person</h2>
+        <p>Located in Cherokee, Iowa, Lazy Cat Antiques offers an ever-changing selection of antiques, collectibles, and historical treasures.</p>
+        <a href="../index.html" class="visit-btn">Return Home</a>
+    </section>
+
+    <section class="story">
+        <h2>Preserving History</h2>
+        <p>At Lazy Cat Antiques, every item is selected for its craftsmanship, character, and historical significance. Rather than simply selling antiques, we strive to create a gallery experience where visitors can appreciate the artistry and stories behind each piece.</p>
+    </section>
+</main>
+
+<footer>
+    <p>Lazy Cat Antiques &bull; Cherokee, Iowa</p>
+</footer>
+
+<script type="module" src="gallery.js"></script>
+</body>
+</html>
